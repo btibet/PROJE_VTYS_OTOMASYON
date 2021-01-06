@@ -36,10 +36,15 @@ namespace PROJE_VTYS_OTOMASYON
         {
 
         }
-
+        frmMusteri fr2;
         private void BtnMusteriler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            if (fr2 == null)
+            {
+                fr2 = new frmMusteri();
+                fr2.MdiParent = this;
+                fr2.Show();
+            }
         }
 
         private void BtnIrsaliye_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
