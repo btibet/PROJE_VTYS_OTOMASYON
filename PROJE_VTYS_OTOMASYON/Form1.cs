@@ -15,6 +15,7 @@ namespace PROJE_VTYS_OTOMASYON
         public Form1()
         {
             InitializeComponent();
+ 
         }
         private void Form1_Load(object sender, EventArgs e)
         {
