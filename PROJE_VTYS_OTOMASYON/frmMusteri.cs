@@ -35,9 +35,19 @@ namespace PROJE_VTYS_OTOMASYON
             da.Fill(dt);
             gridControl1.DataSource = dt;
         }
+        void temizle()
+        {
+            textBox1.Text = "";
+            textBox6.Text = "";
+            textBox5.Text = "";
+            textBox4.Text = "";
+            textBox3.Text = "";
+       
+        }
         private void FrmMusteri_Load(object sender, EventArgs e)
         {
             listele();
+            temizle();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -51,6 +61,7 @@ namespace PROJE_VTYS_OTOMASYON
             bgl.baglanti().Close();
             MessageBox.Show("Müşteri Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             listele();
+            temizle();
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -74,6 +85,7 @@ namespace PROJE_VTYS_OTOMASYON
             bgl.baglanti().Close();
             MessageBox.Show("Ürün silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             listele();
+            temizle();
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -88,6 +100,7 @@ namespace PROJE_VTYS_OTOMASYON
             bgl.baglanti().Close();
             MessageBox.Show("Ürün Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             listele();
+            temizle();
         }
     }
 }

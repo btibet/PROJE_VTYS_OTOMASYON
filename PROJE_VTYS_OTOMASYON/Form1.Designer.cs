@@ -42,7 +42,6 @@ namespace PROJE_VTYS_OTOMASYON
             this.BtnAyar = new DevExpress.XtraBars.BarButtonItem();
             this.BtnAnasayfa = new DevExpress.XtraBars.BarButtonItem();
             this.BtnGrafikler = new DevExpress.XtraBars.BarButtonItem();
-            this.BtnToplualim = new DevExpress.XtraBars.BarButtonItem();
             this.BtnAlisveris = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -76,7 +75,6 @@ namespace PROJE_VTYS_OTOMASYON
             this.BtnAyar,
             this.BtnAnasayfa,
             this.BtnGrafikler,
-            this.BtnToplualim,
             this.BtnAlisveris});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 11;
@@ -117,6 +115,7 @@ namespace PROJE_VTYS_OTOMASYON
             this.BtnStok.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnStok.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnStok.Name = "BtnStok";
+            this.BtnStok.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnStok_ItemClick);
             // 
             // BtnVeresiye
             // 
@@ -171,16 +170,6 @@ namespace PROJE_VTYS_OTOMASYON
             this.BtnGrafikler.Name = "BtnGrafikler";
             this.BtnGrafikler.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnGrafikler_ItemClick);
             // 
-            // BtnToplualim
-            // 
-            this.BtnToplualim.Caption = "TOPLU ALIM";
-            this.BtnToplualim.Id = 9;
-            this.BtnToplualim.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnToplualim.ImageOptions.Image")));
-            this.BtnToplualim.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnToplualim.ImageOptions.LargeImage")));
-            this.BtnToplualim.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.BtnToplualim.ItemAppearance.Normal.Options.UseFont = true;
-            this.BtnToplualim.Name = "BtnToplualim";
-            // 
             // BtnAlisveris
             // 
             this.BtnAlisveris.Caption = "ALIŞVERİŞ";
@@ -190,6 +179,7 @@ namespace PROJE_VTYS_OTOMASYON
             this.BtnAlisveris.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
             this.BtnAlisveris.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnAlisveris.Name = "BtnAlisveris";
+            this.BtnAlisveris.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnAlisveris_ItemClick);
             // 
             // ribbonPage2
             // 
@@ -206,7 +196,6 @@ namespace PROJE_VTYS_OTOMASYON
             this.ribbonPageGroup2.ItemLinks.Add(this.BtnStok);
             this.ribbonPageGroup2.ItemLinks.Add(this.BtnVeresiye);
             this.ribbonPageGroup2.ItemLinks.Add(this.BtnIrsaliye);
-            this.ribbonPageGroup2.ItemLinks.Add(this.BtnToplualim);
             this.ribbonPageGroup2.ItemLinks.Add(this.BtnAlisveris);
             this.ribbonPageGroup2.ItemLinks.Add(this.BtnGrafikler);
             this.ribbonPageGroup2.ItemLinks.Add(this.BtnAyar);
@@ -247,7 +236,6 @@ namespace PROJE_VTYS_OTOMASYON
         private DevExpress.XtraBars.BarButtonItem BtnAyar;
         private DevExpress.XtraBars.BarButtonItem BtnAnasayfa;
         private DevExpress.XtraBars.BarButtonItem BtnGrafikler;
-        private DevExpress.XtraBars.BarButtonItem BtnToplualim;
         private DevExpress.XtraBars.BarButtonItem BtnAlisveris;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
