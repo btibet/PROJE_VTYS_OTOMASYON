@@ -1,7 +1,7 @@
 ﻿
 namespace PROJE_VTYS_OTOMASYON
 {
-    partial class frmMusteri
+    partial class FrmMusteri
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace PROJE_VTYS_OTOMASYON
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMusteri));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMusteri));
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -64,6 +64,7 @@ namespace PROJE_VTYS_OTOMASYON
             this.simpleButton3.Size = new System.Drawing.Size(209, 35);
             this.simpleButton3.TabIndex = 16;
             this.simpleButton3.Text = "GÜNCELLE";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // simpleButton2
             // 
@@ -77,6 +78,7 @@ namespace PROJE_VTYS_OTOMASYON
             this.simpleButton2.Size = new System.Drawing.Size(209, 35);
             this.simpleButton2.TabIndex = 15;
             this.simpleButton2.Text = "SİL";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton1
             // 
@@ -90,6 +92,7 @@ namespace PROJE_VTYS_OTOMASYON
             this.simpleButton1.Size = new System.Drawing.Size(209, 35);
             this.simpleButton1.TabIndex = 14;
             this.simpleButton1.Text = "KAYDET";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // textBox6
             // 
@@ -208,22 +211,25 @@ namespace PROJE_VTYS_OTOMASYON
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // gridView1
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
-            // frmMusteri
+            // FrmMusteri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 547);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
-            this.Name = "frmMusteri";
+            this.Name = "FrmMusteri";
             this.Text = "frmMusteri";
+            this.Load += new System.EventHandler(this.FrmMusteri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
