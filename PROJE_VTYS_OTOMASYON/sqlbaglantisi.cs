@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 
 namespace PROJE_VTYS_OTOMASYON
-{
+{ 
     class sqlbaglantisi
     {
         public SqlConnection baglanti() 
