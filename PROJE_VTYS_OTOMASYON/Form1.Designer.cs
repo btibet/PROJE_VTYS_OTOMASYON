@@ -190,7 +190,6 @@ namespace PROJE_VTYS_OTOMASYON
             // 
             // ribbonPageGroup2
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.BtnAnasayfa);
             this.ribbonPageGroup2.ItemLinks.Add(this.BtnUrunler);
             this.ribbonPageGroup2.ItemLinks.Add(this.BtnMusteriler);
             this.ribbonPageGroup2.ItemLinks.Add(this.BtnStok);

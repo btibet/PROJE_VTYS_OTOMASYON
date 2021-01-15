@@ -47,7 +47,7 @@ namespace PROJE_VTYS_OTOMASYON
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("insert into veresiye_table (MUSTERIID,MUSTERIAD,MUSTERISOYAD,BORCTARIHI,URUNID,URUNADEDI_KG,BORCU) values (@p1,@p2,@p3,@p4,@p5,@p6,p7)", bgl.baglanti());
+            SqlCommand komut = new SqlCommand("insert into veresiye_table (MUSTERIID,MUSTERIAD,MUSTERISOYAD,BORCTARIHI,URUNID,URUNADEDI_KG,BORCU) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", int.Parse((textBox6.Text).ToString()));
             komut.Parameters.AddWithValue("@p2", textBox5.Text);
             komut.Parameters.AddWithValue("@p3", textBox4.Text);
@@ -102,6 +102,11 @@ namespace PROJE_VTYS_OTOMASYON
             textBox2.Text = dr["URUNID"].ToString();
             textBox7.Text = dr["URUNADEDI_KG"].ToString();
             textBox8.Text = dr["BORCU"].ToString();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

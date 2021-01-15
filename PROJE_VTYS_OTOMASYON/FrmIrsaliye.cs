@@ -51,7 +51,7 @@ namespace PROJE_VTYS_OTOMASYON
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("insert into irsaliye_table (URUNADEDI_KG,BIRIMGIRDIFIYATI,IRSALIYENO,BORCTARIHI,FIRMAADI,IRSALIYETARIHI,TOPLAMTUTAR) values (@p1,@p2,@p3,@p4,@p5,@p6,p7)", bgl.baglanti());
+            SqlCommand komut = new SqlCommand("insert into irsaliye_table (URUNADEDI_KG,BIRIMGIRDIFIYATI,IRSALIYENO,FIRMAADI,IRSALIYETARIHI,TOPLAMTUTAR) values (@p1,@p2,@p3,@p4,@p5,@p6)", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", decimal.Parse((textBox6.Text).ToString()));
             komut.Parameters.AddWithValue("@p2", decimal.Parse((textBox5.Text).ToString()));
             komut.Parameters.AddWithValue("@p3", int.Parse((textBox4.Text).ToString()));
@@ -100,7 +100,7 @@ namespace PROJE_VTYS_OTOMASYON
             textBox6.Text = dr["URUNADEDI_KG"].ToString();
             textBox5.Text = dr["BIRIMGIRDIFIYATI"].ToString();
             textBox4.Text = dr["IRSALIYENO"].ToString();
-            textBox3.Text = dr["FIRMADI"].ToString();
+            textBox3.Text = dr["FIRMAADI"].ToString();
             textBox2.Text = dr["IRSALIYETARIHI"].ToString();
             textBox7.Text = dr["TOPLAMTUTAR"].ToString();
         }
